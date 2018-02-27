@@ -6,7 +6,7 @@ A minimal datepicker without any external dependencies.
 * Support for multiple date format
 
 ## Demo
-Check out the demos here : http://embed.plnkr.co/537OoAL20gNq2apA5Fuo/
+Check out the demos here : https://brianalexandro.github.io/datepicker/
 
 ## Getting Started
 Download the code, and open **index.html** file.
