@@ -8,6 +8,31 @@ A minimal datepicker without any external dependencies.
 ## Demo
 Check out the demos here : http://embed.plnkr.co/537OoAL20gNq2apA5Fuo/
 
+## Getting Started
+Download the code, and open **index.html** file.
+
+Include the **style.css** file inside the ```<head>``` tag.
+
+```
+<link rel="stylesheet" href="style.css">
+```
+
+And then include the **AngularJS Core** as well as **app.js**, **app.factory.js**, **app.directive.js** file at the end of ```<body>``` tag.
+
+```
+<script src="https://code.angularjs.org/1.6.3/angular.min.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="app.factory.js"></script>
+<script type="text/javascript" src="app.directive.js"></script>
+```
+
+Finally, include the datepicker directive, and we are set.
+
+```
+<ui-datepicker dr-model="$ctrl.date"></ui-datepicker>
+```
+
 ## License
 MIT License
 
