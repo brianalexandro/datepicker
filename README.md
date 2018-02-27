@@ -33,6 +33,20 @@ Finally, include the datepicker directive, and we are set.
 <ui-datepicker dr-model="$ctrl.date"></ui-datepicker>
 ```
 
+## List of Directive Attributes
+
+| Attribute | Description | Required | Example |
+| --- | --- | --- | --- |
+| dr-model | Directive model | Yes | $ctrl.date |
+| init-min-date | Set a minimum date | No | Any date with **yyyy-mm-dd** format |
+| init-max-date | Set a minimum date | No | Any date with **yyyy-mm-dd** format |
+| format-date | Set the selected format. default : **dd-mm-yyyy** | No | yyyy-mm-dd, dd-mm-yyyy, etc |
+| on-change-date | Set the callback that will be triggered when date is changed | No | $ctrl.onChangeDate() |
+| class-name | Set an additional class name that will be applied to directive input | No | **className** |
+| is-disabled | Set the expression when the directive will be disabled | No | $ctrl.isDisabled |
+| is-required | Set the expression when the directive will be required | No | $ctrl.isRequired |
+| input-name | Set the input ```name``` value | No | **inputNameValue** |
+
 ## License
 MIT License
 
