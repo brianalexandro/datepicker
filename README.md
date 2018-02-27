@@ -1,4 +1,4 @@
-# ui-datepicker
+# Datepicker
 A minimal datepicker without any external dependencies.
 
 ## Features
