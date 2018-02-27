@@ -1,0 +1,172 @@
+html {
+	font-family: sans-serif;
+}
+
+.wrapper-datepicker .content-datepicker * {
+	box-sizing: content-box !important;
+}
+
+.wrapper-datepicker .header * {
+	box-sizing: border-box !important;
+}
+
+.wrapper-datepicker {
+	display: table;
+	width: 100%;
+}
+
+.wrapper-datepicker .datepicker {
+	border-radius: 3px;
+	float:left; 
+	width: 231px;
+}
+
+.wrapper-datepicker .wrapper-outer {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: auto;
+	height: auto;
+	position: absolute;
+	box-shadow: 1px 1px 5px 1px #999999;
+	background-color: #FFFFFF;
+	z-index: 1;
+}
+
+.wrapper-datepicker ul {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+}
+
+.wrapper-datepicker li {
+	text-align: center;
+	width: 23px;
+	padding: 7px 5px;
+	display: inline-block;
+	position: relative;
+}
+
+.wrapper-datepicker li.active {
+	background-color: #286090;
+	color: #FFF;
+	border-radius: 5px;
+}		
+
+.wrapper-datepicker input {
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+
+.wrapper-datepicker input[readonly] {
+	background-color: #FFFFFF;
+}
+
+.wrapper-datepicker input[disabled] {
+    background-color: #EEEEEE;
+}
+
+.wrapper-datepicker .wrapper-date li.diffmonth {
+	opacity: 0.5;
+}
+
+.wrapper-datepicker .wrapper-date li.holiday {
+	color: red;
+}
+
+.wrapper-datepicker .wrapper-date li.active.holiday {
+	color: #FFFFFF;
+}
+
+.wrapper-datepicker .wrapper-date li.disabled {
+	opacity: 0.5;
+}
+
+.wrapper-datepicker .wrapper-date li.valid:hover {
+	background-color: #286090;
+	color: #FFFFFF;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.wrapper-datepicker .wrapper-date li.disabled:hover {
+	cursor: not-allowed !important;
+	background-color: transparent;
+}
+
+.wrapper-datepicker .wrapper-date li.today {
+    background-color: #44914b;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.wrapper-datepicker .header {
+	height: 32px;
+}
+
+.wrapper-datepicker .header .left {
+	text-align: center;
+	padding: 7px 0;
+	float: left;
+	width: 15%;
+}
+
+.wrapper-datepicker .header .left, .wrapper-datepicker .header .right {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.wrapper-datepicker .header .left:hover, .wrapper-datepicker .header .right:hover {
+	background-color: #286090;
+	color: #FFFFFF;
+}
+
+.wrapper-datepicker .header .middle {
+	margin: 4px 0;
+	text-align: center;
+	float: left;
+	font-weight: bold;
+}
+
+.wrapper-datepicker .header .middle.part.month {
+	width: 42%;
+}
+
+.wrapper-datepicker .header .middle.part.year {
+	width: 26%;
+	margin-left: 4px;
+}
+
+.wrapper-datepicker .header .right {
+	text-align: center;
+	padding: 7px 0;
+	float: right;
+	width: 15%;
+}
+
+.wrapper-datepicker select {
+	width: 100%;
+	padding: 2px;
+	border-color: transparent;
+	border-bottom: 1px solid #ccc;
+	margin: 1px;
+	height: auto;
+	background-color: #FFF;
+}
+
+.wrapper-datepicker select option {
+	color: #000000 !important;
+}
+
+.wrapper-datepicker .content-datepicker .wrapper-day {
+	font-weight: bold;
+	font-size: 13px;
+	display: table;
+}
+
+.wrapper-datepicker .content-datepicker {
+	margin-top: 5px;
+}
+
+.wrapper-datepicker .wrapper-input {
+	position: relative;
+}

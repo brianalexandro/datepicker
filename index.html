@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="ngApp">
+	<head>
+
+		<meta charset="utf-8" />
+		<title>Datepicker</title>
+
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body>
+
+		<h2>DATEPICKER</h2>
+		<div ng-controller="TestingController as $ctrl">
+
+			<div>
+				<ui-datepicker dr-model="$ctrl.date" on-change-date="$ctrl.onChangeDate()" format-date="yyyy-mmm-dd"></ui-datepicker>
+			</div>
+
+		</div>
+
+		<!-- ANGULAR CORE -->
+		<script src="https://code.angularjs.org/1.6.3/angular.min.js"></script>
+
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="app.factory.js"></script>
+		<script type="text/javascript" src="app.directive.js"></script>
+
+	</body>
+
+</html>
