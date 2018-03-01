@@ -23,6 +23,7 @@ And then include the **AngularJS Core** as well as **app.js**, **app.filter.js**
 <script src="https://code.angularjs.org/1.6.3/angular.min.js"></script>
 
 <script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="app.filter.js"></script>
 <script type="text/javascript" src="app.factory.js"></script>
 <script type="text/javascript" src="app.directive.js"></script>
 ```
