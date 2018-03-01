@@ -20,8 +20,10 @@ angular.module('ngApp').directive('uiDatepicker', function($document, $filter, $
         		attrs.className = '';
         	}
 
-        	return `<div class="wrapper-datepicker">
-        				<div class="wrapper-input">
+        	return $filter('cleanHTML')
+        	(
+        		`<div class="wrapper-datepicker">
+						<div class="wrapper-input">
 							<input type="text" ng-disabled="isDisabled" ng-model="formattedSelectedDate" ng-attr-name="{{ inputName }}" ng-required="isRequired" ng-focus="isOpen = true" readonly class="form-control ${attrs.className}" />
 						</div>
 						<div class="wrapper-outer" ng-show="isOpen == true">
@@ -75,9 +77,25 @@ angular.module('ngApp').directive('uiDatepicker', function($document, $filter, $
 										</li>
 									</ul>
 								</div>
+								<div class="footer">
+									<div class="left">
+										<button type="button" ng-click="setToday()" ng-disabled="isDisabledToday()" class="button" ng-class="{ 'disabled' : isDisabledToday() }">
+											Today
+										</button>
+										<button type="button" ng-click="clear()" ng-disabled="!selectedDate" class="button" ng-class="{ 'disabled' : !selectedDate }">
+											Clear
+										</button>
+									</div>
+									<div class="right">
+										<button type="button" ng-click="isOpen = false" class="button">
+											Close
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>`;
+					</div>`
+			);
         },
 		link : function($scope, element, attrs) {
 
@@ -108,7 +126,7 @@ angular.module('ngApp').directive('uiDatepicker', function($document, $filter, $
 		        	if( newValue != oldValue ) {
 		        		if( newValue ) {
 
-							$scope.minDate               = newValue;
+							$scope.minDate = newValue;
 							
 							if( $scope.selectedDate === undefined ) {
 								newValue                     = newValue.split('-');
@@ -212,8 +230,8 @@ angular.module('ngApp').directive('uiDatepicker', function($document, $filter, $
 				$scope.minDate = $scope.minDate || minYear + '-01-1';
 				$scope.maxDate = $scope.maxDate || maxYear + '-12-31';
 				
-				$scope.defaultFormat = $scope.formatDate || 'dd-mm-yyyy';
-				$scope.today         = new Date().toJSON().slice(0,10);
+				$scope.defaultFormat   = $scope.formatDate || 'dd-mm-yyyy';
+				$scope.today           = new Date().toJSON().slice(0,10);
 			}
 
 			$scope.prevMonth = function(){
@@ -282,6 +300,27 @@ angular.module('ngApp').directive('uiDatepicker', function($document, $filter, $
 	        			$scope.onChangeDate();
 	        		}
 				});
+			}
+
+			$scope.clear = function() {
+				$scope.selectedDate = false;
+			}
+
+			$scope.setToday = function() {
+				var arrDateToday = $scope.today.split('-');
+
+				$scope.setSelectedDate(arrDateToday[0], arrDateToday[1], arrDateToday[2]);
+				$scope.isOpen    = false;
+			}
+
+			$scope.isDisabledToday = function() {
+
+				var result = false;
+				if( $scope.minDate !== undefined && $scope.maxDate !== undefined ) {
+					result = ( new Date($scope.today) < new Date($scope.minDate) || new Date($scope.today) > new Date($scope.maxDate) );
+				}
+
+				return result;
 			}
 
 			$scope.render = function() {
