@@ -17,7 +17,7 @@ Include the **style.css** file inside the ```<head>``` tag.
 <link rel="stylesheet" href="style.css">
 ```
 
-And then include the **AngularJS Core** as well as **app.js**, **app.factory.js**, **app.directive.js** file at the end of ```<body>``` tag.
+And then include the **AngularJS Core** as well as **app.js**, **app.filter.js**, **app.factory.js**, **app.directive.js** file at the end of ```<body>``` tag.
 
 ```
 <script src="https://code.angularjs.org/1.6.3/angular.min.js"></script>
