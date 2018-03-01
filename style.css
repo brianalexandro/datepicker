@@ -170,3 +170,29 @@ html {
 .wrapper-datepicker .wrapper-input {
 	position: relative;
 }
+
+.wrapper-datepicker .footer .button {
+	cursor: pointer;
+}
+
+.wrapper-datepicker .footer .button.disabled {
+	cursor: not-allowed;
+}
+
+.wrapper-datepicker .footer {
+	border-top: 1px solid #ccc;
+}
+
+.wrapper-datepicker .footer .left {
+	text-align: left;
+	padding: 7px 10px 12px;
+	float: left;
+	width: 55%;
+}
+
+.wrapper-datepicker .footer .right {
+	text-align: right;
+	padding: 7px 10px 12px;
+	float: right;
+	width: 20%;
+}
